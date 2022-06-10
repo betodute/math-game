@@ -1,0 +1,35 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1em;
+}
+
+.heading {
+  font-family: 'MuseoModerno', cursive;
+}
+
+h1 {
+  margin-top: 1em;
+  color: green;
+}
+
+h2 {
+  margin-bottom: 1em;
+}
+
+body {
+  background: antiquewhite;
+}
+
+.board-contain {
+  display: flex;
+  justify-content: center;
+}
+
+.gameboard {
+  width: 75%;
+  height: 10em;
+  border: solid;
+  border-radius: 1em;
+}
