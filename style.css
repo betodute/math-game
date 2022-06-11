@@ -29,7 +29,17 @@ body {
 
 .gameboard {
   width: 75%;
-  height: 10em;
+  height: 20em;
   border: solid;
   border-radius: 1em;
+}
+
+.timer-contain {
+  display: flex;
+  justify-content: center;
+}
+
+.timer {
+  font-size: 3em;
+  color: red;
 }
