@@ -43,3 +43,34 @@ body {
   font-size: 3em;
   color: red;
 }
+
+.problem-contain {
+  display: flex;
+  justify-content: center;
+}
+
+.problem {
+  font-size: 3em;
+  color: black;
+}
+
+.form-contain {
+  display: flex;
+  justify-content: center;
+}
+
+.try-again {
+  font-size: 2em;
+  color: red;
+  display: none;
+}
+
+.try-contain {
+  display: flex;
+  justify-content: center;
+}
+
+.main-headline {
+  display: flex;
+  justify-content: center;
+}

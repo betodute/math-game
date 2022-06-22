@@ -1,28 +1,68 @@
 $(document).ready(function() { 
-  var timeRemaining = 10;
-  
-  var startTimer = setInterval(function(){
-    timeRemaining -= 1;
-    $('.timer').html(timeRemaining);
-    if (timeRemaining === 0) {
-      clearInterval(startTimer);
-    }
-  }, 1000)
 
+  $("#userForm").on('submit', function(event) {
+    event.preventDefault();
+    startGame();
+    checkAnswer();
+  });
+
+  problemLvlOne();
 })
 
 // Application Starts
 
-var randomNum = (max) => {
-  return Math.floor(Math.random() * max);
-  console.log('hit function')
-}
+var answer = 0;
+var timeRemaining = 10;
+var gameActive = 0;
 
-var createProblem = (maxNum) => {
-  return `${randomNum(maxNum)} + ${randomNum(maxNum)}`
+var checkAnswer = () => {
+  var userAnswer = parseInt($('#userInput').val());
+  $('#userInput').val('');
+  if (answer === userAnswer ) {
+    $('.try-again').css("display", "none");
+    timeRemaining += 5;
+    problemLvlOne();
+  } else {
+    tryAgain();
+  };
 };
 
-var instance = createProblem(10);
+var startGame = () => {
+  if (gameActive === 0) {
+    timeRemaining = 10;
+    gameActive = 1;
+    var startTimer = setInterval(function(){
+      timeRemaining -= 1;
+      $('.timer').html(timeRemaining);
+      if (timeRemaining <= 0) {
+        gameOver();
+        clearInterval(startTimer);
+      }
+    }, 1000)
+  };
+} 
 
-console.log(instance);
+var createProblem = (maxNum) => {
+  var firstNum = randomNum(maxNum);
+  var secondNum = randomNum(maxNum);
+  answer = firstNum + secondNum;
+  return `${firstNum} + ${secondNum} =`
+};
+
+var gameOver = () => {
+  gameActive = 0;
+};
+
+var tryAgain = function() {
+  $('.try-again').css("display", "block");
+}
+
+var problemLvlOne = function () {
+  $('.problem').html(createProblem(10));
+};
+
+var randomNum = (max) => {
+  return Math.floor(Math.random() * max);
+}
+
 

@@ -20,20 +20,27 @@
     </div>
     <div class="container board-contain">
       <div class="row gameboard">
-        <div class="col-12 timer-contain m-2">
-          <div class="timer">
-            10
+        <div class="main-headline"> 
+          <div class="col-4 try-contain m-1">
+            <div class="try-again">¡ Try Again !</div>
+          </div>
+          <div class="col-4 timer-contain m-2">
+            <div class="timer">10</div>
+          </div>
+          <div class="col-4 over-contain">
+            <div class="game-over">¡ Game Over !</div>
           </div>
         </div>
         <div class="col-12 problem-contain m-1">
           <div class="problem">
-
           </div>
-        <div>
-        <form class="answer m-1">
-          <label> 
-          <input type="text" placeholder="Your Answer">
-        </form>
+        </div>
+        <div class="col-12 form-contain">
+          <form id="userForm" class="answer m-1">
+            <label> 
+            <input id="userInput" type="text" placeholder="Your Answer">
+          </form>
+        </div>
       </div>
     </div>
   </body>
