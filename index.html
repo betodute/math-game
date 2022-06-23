@@ -23,23 +23,28 @@
       <h1 class="heading">Arithmetricks:</h1>
       <h2 class="heading">A Timed Math Game by Beto</h2>
     </div>
-    <div class="container board-contain">
+    <div class="container-fluid board-contain">
       <div class="row gameboard">
+
         <div class="col-12 main-headline"> 
-          <div class="col-4 try-contain m-1">
+          <div class="col-4 try-contain m-2">
             <div class="try-again">¡ Try Again !</div>
           </div>
-          <div class="col-4 timer-contain m-2">
-            <div class="timer m-1">10</div>
+          <div class="col-4 button-contain m-2">
+            <button class="btn start-game">Start Game</button>
           </div>
           <div class="col-4 over-contain m-2">
-            <div class="game-over">¡Game Over!</div>
+            <div class="game-over">¡ Game Over !</div>
           </div>
         </div>
+
         <div class="col-12 score-contain">
-          <div class="score-label m-1">Score:</div>
-          <div class="score m-1">0</div>
+          <div class="score-label">Score:</div>
+          <div class="score">0</div>
+          <div class="timer-label">Seconds: </div>
+          <div class="timer">10</div>
         </div>
+      
         <div class="col-12 problem-contain m-1">
           <div class="problem">
           </div>
@@ -50,9 +55,6 @@
             <input id="userInput" type="text" placeholder="Your Answer">
             <button class="btn submit-button">Submit Answer</button>
           </form>
-        </div>
-        <div class="col-12 button-contain m-2">
-          <button class="btn start-game m-2">(Re)Start Game + Timer</button>
         </div>
       </div>
     </div>

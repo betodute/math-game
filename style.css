@@ -34,15 +34,18 @@ body {
   border-radius: 1em;
 }
 
-.timer-contain {
-  display: flex;
-  justify-content: center;
+.timer-label {
+  font-family: 'Faustina', serif;
+  font-size: 1.5em;
+  color: red;
+  margin-left: 1.5em;
 }
 
 .timer {
   font-family: 'Faustina', serif;
-  font-size: 2.5em;
+  font-size: 1.5em;
   color: red;
+  margin-left: .3em;
 }
 
 .problem-contain {
@@ -61,15 +64,17 @@ body {
 }
 
 .try-again {
-  font-size: 1em;
+  font-size: 1.5em;
   color: red;
   display: none;
+  margin-top: 1em;
 }
 
 .game-over {
   font-size: 1.5em;
   color: red;
   display: none;
+  margin-top: 1em;
 }
 
 .try-contain {
@@ -85,6 +90,7 @@ body {
 .start-game {
   border: solid green 3px;
   border-radius: 15px;
+  margin-top: 1em;
 }
 
 .button-contain {
@@ -109,5 +115,6 @@ body {
 .score {
   font-family: 'Faustina', serif;
   font-size: 1.5em;
+  margin-left: .3em;
 }
 
