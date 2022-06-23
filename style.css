@@ -29,7 +29,7 @@ body {
 
 .gameboard {
   width: 75%;
-  height: 20em;
+  height: 24em;
   border: solid;
   border-radius: 1em;
 }
@@ -40,7 +40,8 @@ body {
 }
 
 .timer {
-  font-size: 3em;
+  font-family: 'Faustina', serif;
+  font-size: 2.5em;
   color: red;
 }
 
@@ -60,7 +61,13 @@ body {
 }
 
 .try-again {
-  font-size: 2em;
+  font-size: 1em;
+  color: red;
+  display: none;
+}
+
+.game-over {
+  font-size: 1.5em;
   color: red;
   display: none;
 }
@@ -74,3 +81,33 @@ body {
   display: flex;
   justify-content: center;
 }
+
+.start-game {
+  border: solid green 3px;
+  border-radius: 15px;
+}
+
+.button-contain {
+  display: flex;
+  justify-content: center;
+}
+
+.submit-button {
+  border: solid blue 2px;
+}
+
+.score-contain {
+  display: flex;
+  justify-content: center;
+}
+
+.score-label {
+  font-family: 'Faustina', serif;
+  font-size: 1.5em;
+}
+
+.score {
+  font-family: 'Faustina', serif;
+  font-size: 1.5em;
+}
+

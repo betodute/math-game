@@ -8,7 +8,12 @@
     <link href="style.css" rel="stylesheet" type="text/css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="script.js"></script>
-    <!-- GOOGLE FONTS: Fautstina and Museo Moderno from Omnibus-Type -->
+    <!--
+      GOOGLE FONTS: Faustina and Museo Moderno from Omnibus-Type 
+      CSS SELECT:
+      font-family: 'Faustina', serif;
+      font-family: 'MuseoModerno', cursive;
+    -->
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Faustina:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=MuseoModerno:wght@100;200;300;400;500;600;700;800;900&display=swap');
       </style>
@@ -20,26 +25,34 @@
     </div>
     <div class="container board-contain">
       <div class="row gameboard">
-        <div class="main-headline"> 
+        <div class="col-12 main-headline"> 
           <div class="col-4 try-contain m-1">
             <div class="try-again">¡ Try Again !</div>
           </div>
           <div class="col-4 timer-contain m-2">
-            <div class="timer">10</div>
+            <div class="timer m-1">10</div>
           </div>
-          <div class="col-4 over-contain">
-            <div class="game-over">¡ Game Over !</div>
+          <div class="col-4 over-contain m-2">
+            <div class="game-over">¡Game Over!</div>
           </div>
+        </div>
+        <div class="col-12 score-contain">
+          <div class="score-label m-1">Score:</div>
+          <div class="score m-1">0</div>
         </div>
         <div class="col-12 problem-contain m-1">
           <div class="problem">
           </div>
         </div>
-        <div class="col-12 form-contain">
-          <form id="userForm" class="answer m-1">
+        <div class="col-12 form-contain m-1">
+          <form id="userForm" class="answer">
             <label> 
             <input id="userInput" type="text" placeholder="Your Answer">
+            <button class="btn submit-button">Submit Answer</button>
           </form>
+        </div>
+        <div class="col-12 button-contain m-2">
+          <button class="btn start-game m-2">(Re)Start Game + Timer</button>
         </div>
       </div>
     </div>
