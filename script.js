@@ -71,6 +71,7 @@ var tryAgain = function() {
 
 var gameOver = function() {
   gameActive = 0;
+  score = 0;
   $('.game-over').css("display", "block");
 }
 
