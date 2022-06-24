@@ -18,45 +18,42 @@
       @import url('https://fonts.googleapis.com/css2?family=Faustina:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=MuseoModerno:wght@100;200;300;400;500;600;700;800;900&display=swap');
       </style>
   </head>
+
   <body>
-    <div class="container header">
-      <h1 class="heading">Arithmetricks:</h1>
-      <h2 class="heading">A Timed Math Game by Beto</h2>
+
+    <div class="container">
+      <div class="row package">
+        <h1 class="heading">Arithmetricks:</h1>
+        <h2 class="heading">A Timed Math Game by Beto</h2>
+      </div>
     </div>
-    <div class="container-fluid board-contain">
+
+    <div class="container package">
       <div class="row gameboard">
-
-        <div class="col-12 main-headline"> 
-          <div class="col-4 try-contain m-2">
-            <div class="try-again">¡ Try Again !</div>
-          </div>
-          <div class="col-4 button-contain m-2">
-            <button class="btn start-game">Start Game</button>
-          </div>
-          <div class="col-4 over-contain m-2">
-            <div class="game-over">¡ Game Over !</div>
-          </div>
+        
+        <div class="col-12 package m-1">
+          <button class="btn start-game">Start Game</button>
         </div>
-
-        <div class="col-12 score-contain">
+       
+        <div class="col-12 package m-1">
           <div class="score-label">Score:</div>
           <div class="score">0</div>
           <div class="timer-label">Seconds: </div>
           <div class="timer">10</div>
         </div>
-      
-        <div class="col-12 problem-contain m-1">
-          <div class="problem">
-          </div>
+
+        <div class="col-12 package m-1">
+          <div class="problem"></div>
         </div>
-        <div class="col-12 form-contain m-1">
-          <form id="userForm" class="answer">
-            <label> 
-            <input id="userInput" type="text" placeholder="Your Answer">
-            <button class="btn submit-button">Submit Answer</button>
+       
+        <div class="col-12 package m-1">
+          <form id="userForm" class="answer"> 
+            <input id="userInput" type="number" placeholder="Your Answer">
           </form>
         </div>
+
       </div>
     </div>
+
   </body>
 </html>

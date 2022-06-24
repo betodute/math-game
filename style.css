@@ -1,8 +1,7 @@
-.header {
+
+.package {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 1em;
+  justify-content: center;
 }
 
 .heading {
@@ -22,13 +21,8 @@ body {
   background: antiquewhite;
 }
 
-.board-contain {
-  display: flex;
-  justify-content: center;
-}
-
 .gameboard {
-  width: 75%;
+  width: 30em;
   height: 24em;
   border: solid;
   border-radius: 1em;
@@ -48,64 +42,18 @@ body {
   margin-left: .3em;
 }
 
-.problem-contain {
-  display: flex;
-  justify-content: center;
-}
-
 .problem {
   font-size: 3em;
   color: black;
 }
 
-.form-contain {
-  display: flex;
-  justify-content: center;
-}
-
-.try-again {
-  font-size: 1.5em;
-  color: red;
-  display: none;
-  margin-top: 1em;
-}
-
-.game-over {
-  font-size: 1.5em;
-  color: red;
-  display: none;
-  margin-top: 1em;
-}
-
-.try-contain {
-  display: flex;
-  justify-content: center;
-}
-
-.main-headline {
-  display: flex;
-  justify-content: center;
-}
 
 .start-game {
-  border: solid green 3px;
-  border-radius: 15px;
-  margin-top: 1em;
+  border: solid green;
+  border-radius: 1em;
+  margin-top: .5em;
 }
 
-.button-contain {
-  display: flex;
-  justify-content: center;
-}
-
-.submit-button {
-  border: solid blue 2px;
-}
-
-.score-contain {
-  display: flex;
-  justify-content: center;
-}
 
 .score-label {
   font-family: 'Faustina', serif;
