@@ -4,16 +4,14 @@
   justify-content: center;
 }
 
-.heading {
-  font-family: 'MuseoModerno', cursive;
-}
-
 h1 {
+  font-family: 'MuseoModerno', cursive;
   margin-top: 1em;
   color: green;
 }
 
 h2 {
+  font-family: 'MuseoModerno', cursive;
   margin-bottom: 1em;
 }
 
@@ -51,7 +49,8 @@ body {
 .start-game {
   border: solid green;
   border-radius: 1em;
-  margin-top: .5em;
+  margin-bottom: 1em;
+  display: none;
 }
 
 

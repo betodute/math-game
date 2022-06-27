@@ -1,12 +1,18 @@
 $(document).ready(function() { 
 
   $("#userInput").on('keyup', function() {
-    checkAnswer();
+    if (gameActive === 0) {
+      startGame();
+      checkAnswer();
+    } else {
+      checkAnswer();
+    }
   });
 
   $('.start-game').on('click', function() {
     score = 0;
     startGame();
+    $('.start-game').css("display", "none");
   })
 
   problemLvlOne();
@@ -14,8 +20,9 @@ $(document).ready(function() {
 
 // Application Starts
 
+var gameActive = 0;
 var answer = 0;
-var timeRemaining = 10;
+var timeRemaining = 0;
 var score = 0;
 
 var checkAnswer = () => {
@@ -28,6 +35,7 @@ var checkAnswer = () => {
 };
 
 var startGame = () => {
+  gameActive = 1;
   timeRemaining = 10;
   timerStation()
 } 
@@ -52,13 +60,13 @@ var createProblem = (maxNum) => {
 
 var addScore = () => {
   score += 1;
-  timeRemaining += 1;
+  timeRemaining += 3;
   $('.score').html(score);
 }
 
 var gameOver = function() {
   gameActive = 0;
-  $('.game-over').css("display", "block");
+  $('.start-game').css("display", "block");
 }
 
 var problemLvlOne = function () {

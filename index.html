@@ -21,20 +21,17 @@
 
   <body>
 
-    <div class="container">
-      <div class="row package">
-        <h1 class="heading">Arithmetricks:</h1>
-        <h2 class="heading">A Timed Math Game by Beto</h2>
-      </div>
+    <div class="package">
+      <div>
+        <h1 class="col-12">Arithmetricks:</h1>
+        <h2 class="col-12">A Timed Math Game by Beto</h2>
+      </div> 
     </div>
+
 
     <div class="container package">
       <div class="row gameboard">
-        
-        <div class="col-12 package m-1">
-          <button class="btn start-game">Start Game</button>
-        </div>
-       
+
         <div class="col-12 package m-1">
           <div class="score-label">Score:</div>
           <div class="score">0</div>
@@ -42,14 +39,18 @@
           <div class="timer">10</div>
         </div>
 
-        <div class="col-12 package m-1">
+        <div class="col-12 package">
           <div class="problem"></div>
         </div>
        
-        <div class="col-12 package m-1">
+        <div class="col-12 package">
           <form id="userForm" class="answer"> 
             <input id="userInput" type="number" placeholder="Your Answer">
           </form>
+        </div>
+
+        <div class="col-12 package btn-contain">
+          <button class="btn start-game">Restart Game</button>
         </div>
 
       </div>
