@@ -57,7 +57,7 @@ var timerStation = () => {
 
 var addScore = () => {
   score += 1;
-  timeRemaining += 3;
+  timeRemaining += 1;
   $('.score').html(score);
 }
 
