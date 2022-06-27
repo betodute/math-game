@@ -4,13 +4,16 @@ $(document).ready(function() {
     if (gameActive === 0) {
       startGame();
       checkAnswer();
-    } else {
+    };
+    if (gameActive === 1 && timeRemaining > 0) {
       checkAnswer();
-    }
+    };
   });
 
   $('.start-game').on('click', function() {
+    gameActive = 0;
     score = 0;
+    $('.score').html(score);
     startGame();
     $('.start-game').css("display", "none");
   })
@@ -24,6 +27,13 @@ var gameActive = 0;
 var answer = 0;
 var timeRemaining = 0;
 var score = 0;
+var highScore = 0;
+
+var startGame = () => {
+  gameActive = 1;
+  timeRemaining = 10;
+  timerStation()
+} 
 
 var checkAnswer = () => {
   var userAnswer = parseInt($('#userInput').val());
@@ -33,12 +43,6 @@ var checkAnswer = () => {
     problemLvlOne();
   }
 };
-
-var startGame = () => {
-  gameActive = 1;
-  timeRemaining = 10;
-  timerStation()
-} 
 
 var timerStation = () => {
     var startTimer = setInterval(function(){
@@ -51,13 +55,6 @@ var timerStation = () => {
     }, 1000)
 };
 
-var createProblem = (maxNum) => {
-  var firstNum = randomNum(maxNum);
-  var secondNum = randomNum(maxNum);
-  answer = firstNum + secondNum;
-  return `${firstNum} + ${secondNum} =`
-};
-
 var addScore = () => {
   score += 1;
   timeRemaining += 3;
@@ -65,9 +62,19 @@ var addScore = () => {
 }
 
 var gameOver = function() {
-  gameActive = 0;
+  if (score > highScore) {
+    highScore = score;
+  }
+  $('.high-score').html(highScore)
   $('.start-game').css("display", "block");
 }
+
+var createProblem = (maxNum) => {
+  var firstNum = randomNum(maxNum);
+  var secondNum = randomNum(maxNum);
+  answer = firstNum + secondNum;
+  return `${firstNum} + ${secondNum} =`
+};
 
 var problemLvlOne = function () {
   $('.problem').html(createProblem(10));

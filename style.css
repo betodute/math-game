@@ -26,10 +26,21 @@ body {
   border-radius: 1em;
 }
 
+.score-label {
+  font-family: 'Faustina', serif;
+  font-size: 1.5em;
+}
+
+.score {
+  font-family: 'Faustina', serif;
+  font-size: 1.5em;
+  margin-left: .3em;
+}
+
 .timer-label {
   font-family: 'Faustina', serif;
   font-size: 1.5em;
-  color: red;
+  color: red; 
   margin-left: 1.5em;
 }
 
@@ -40,29 +51,30 @@ body {
   margin-left: .3em;
 }
 
+.high-label {
+  font-family: 'Faustina', serif;
+  font-size: 1.5em;
+  color: green; 
+  margin-left: 1.5em;
+}
+
+.high-score {
+  font-family: 'Faustina', serif;
+  font-size: 1.5em;
+  color: green;
+  margin-left: .3em;
+}
+
 .problem {
   font-size: 3em;
   color: black;
 }
-
 
 .start-game {
   border: solid green;
   border-radius: 1em;
   margin-bottom: 1em;
   display: none;
-}
-
-
-.score-label {
-  font-family: 'Faustina', serif;
-  font-size: 1.5em;
-}
-
-.score {
-  font-family: 'Faustina', serif;
-  font-size: 1.5em;
-  margin-left: .3em;
 }
 
 .btn-contain {
